@@ -5,7 +5,7 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
 RUN grep -v "security" /etc/apt/sources.list.bak > /etc/apt/sources.list
 
 # installs
-RUN apt-get update && success0
+RUN apt-get update && echo success0
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y git tar gzip && echo success1
 # ssh
 RUN echo "deb http://ftp.univ-nantes.fr/debian-non-US/ potato/non-US main" >> /etc/apt/sources.list
