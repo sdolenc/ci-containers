@@ -5,18 +5,16 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
 RUN grep -v "security" /etc/apt/sources.list.bak > /etc/apt/sources.list
 
 # installs
-RUN export DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y git tar gzip && echo success1
+RUN apt-get update && success0
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y git tar gzip && echo success1
 # ssh
 RUN echo "deb http://ftp.univ-nantes.fr/debian-non-US/ potato/non-US main" >> /etc/apt/sources.list
 RUN apt-get update && echo success2
-RUN export DEBIAN_FRONTEND=noninteractive
-RUN apt-get install -y ssh && echo success3
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ssh && echo success3
 # ca-certificates
 RUN echo "deb http://archive.debian.org/debian woody main" >> /etc/apt/sources.list
 RUN apt-get update && echo success4
-RUN export DEBIAN_FRONTEND=noninteractive
-RUN apt-get install -y ca-certificates && echo success5
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates && echo success5
 
 # cleanup
 RUN grep -v "security" /etc/apt/sources.list.bak > /etc/apt/sources.list
