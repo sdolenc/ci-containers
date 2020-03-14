@@ -1,4 +1,4 @@
-FROM penz/debian-potato-i386
+FROM lpenz/debian-potato-i386
 
 # remove security to help speed up apt-get (and reduce failures)
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -11,4 +11,5 @@ RUN echo "deb http://archive.debian.org/debian woody main" >> /etc/apt/sources.l
 RUN apt-get update && apt-get install -y ssh ca-certificates && echo echo
 
 # cleanup
-RUN rm -rf /var/lib/apt/lists/*
+RUN grep -v "security" /etc/apt/sources.list.bak > /etc/apt/sources.list
+RUN apt-get update
