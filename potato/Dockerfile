@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y git tar gzip && echo success1
 # ssh
 RUN echo "deb http://ftp.univ-nantes.fr/debian-non-US/ potato/non-US main" >> /etc/apt/sources.list
 RUN apt-get update && echo success2
-RUN apt-get install -y ssh && echo success3
+RUN apt-get install -y ssh || echo failed3
 # ca-certificates
 RUN echo "deb http://archive.debian.org/debian woody main" >> /etc/apt/sources.list
 RUN apt-get update && echo success4
