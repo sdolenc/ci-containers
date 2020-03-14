@@ -7,7 +7,7 @@ https://hub.docker.com/r/sdolenc/debian-circleci
 
 | container image    | os         | released      | status |
 |--------------------|------------|---------------|--------|
-| sdolenc/debian-circleci:latest  | stable | changing | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/debian-circleci/latest) |
+| sdolenc/debian-circleci:latest  | stable |  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/debian-circleci/latest) |
 | sdolenc/debian-circleci:buster  | Debian 10  | July 2019     | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/debian-circleci/buster) |
 | sdolenc/debian-circleci:stretch | Debian 9   | June 2017     | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/debian-circleci/stretch) |
 | sdolenc/debian-circleci:jessie  | Debian 8.0 | April 2015    | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/debian-circleci/jessie) |
