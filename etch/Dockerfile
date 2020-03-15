@@ -5,14 +5,11 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
 RUN grep -v "security" /etc/apt/sources.list.bak > /etc/apt/sources.list
 
 # installs
-RUN apt-get update && apt-get install -y aptitude && aptitude install -y ssh tar gzip ca-certificates && echo success1
-# git
-RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
-RUN echo "deb http://archive.debian.org/debian lenny main" > /etc/apt/sources.list
+RUN apt-get update && apt-get install -y ssh tar gzip && echo success1
+# git, ca-certificates
+RUN echo "deb http://archive.debian.org/debian-backports etch-backports main" >> /etc/apt/sources.list
 RUN apt-get update && echo success2
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes git-core <<< "Yes, do as I say!"
+RUN apt-get install -y --force-yes -t etch-backports git-core && echo success3
 
 # cleanup
-RUN cp /etc/apt/sources.list.bak /etc/apt/sources.list
-RUN apt-get update && echo success3
 RUN apt-get -y clean && echo success4
