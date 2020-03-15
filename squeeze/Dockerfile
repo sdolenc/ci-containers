@@ -10,8 +10,8 @@ RUN apt-get update && echo success3
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes git && echo sucess4
 
 # cleanup
-RUN apt-get update && echo success5
 RUN cp /etc/apt/sources.list.bak /etc/apt/sources.list
-RUN apt-get -y autoremove && echo success3
-RUN apt-get -y clean && echo success4
+RUN apt-get update && echo success5
+RUN apt-get -y autoremove && echo success6
+RUN apt-get -y clean && echo success7
 RUN rm -rf /var/lib/apt/lists/*
