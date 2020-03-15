@@ -10,9 +10,9 @@ RUN apt-get update && apt-get install -y aptitude && aptitude install -y ssh tar
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
 RUN echo "deb http://archive.debian.org/debian lenny main" > /etc/apt/sources.list
 RUN apt-get update && echo success2
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes git && echo sucess3
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes git-core <<< "Yes, do as I say!"
 
 # cleanup
 RUN cp /etc/apt/sources.list.bak /etc/apt/sources.list
-RUN apt-get update && echo success4
-RUN apt-get -y clean && echo success5
+RUN apt-get update && echo success3
+RUN apt-get -y clean && echo success4
