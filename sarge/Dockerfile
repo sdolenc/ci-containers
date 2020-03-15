@@ -17,4 +17,3 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes git-core && ec
 RUN cp /etc/apt/sources.list.bak /etc/apt/sources.list
 RUN apt-get update && echo success4
 RUN apt-get -y clean && echo success5
-RUN rm -rf /var/lib/apt/lists/*
