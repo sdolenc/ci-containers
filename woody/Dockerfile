@@ -7,6 +7,3 @@ RUN grep -v "security" /etc/apt/sources.list.bak > /etc/apt/sources.list
 # installs
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y aptitude && aptitude install -y git ssh tar gzip ca-certificates && echo echo
-
-# cleanup
-RUN rm -rf /var/lib/apt/lists/*
