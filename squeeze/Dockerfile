@@ -1,4 +1,4 @@
-FROM debian/eol:squeeze
+FROM lpenz/debian-squeeze-amd64
 
 # remove security to help speed up apt-get (and reduce failures)
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
