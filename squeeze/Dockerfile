@@ -1,4 +1,4 @@
-FROM lpenz/debian-squeeze-amd64
+FROM lpenz/debian-squeeze-i386-minbase
 
 # installs
 RUN apt-get update && echo success1
