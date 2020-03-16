@@ -1,5 +1,5 @@
 # ci-containers
-(work in progress) various debian container images that work on circle ci
+debian container images that work on circle ci
 
 https://github.com/sdolenc/ci-containers
 
