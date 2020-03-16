@@ -19,3 +19,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates && echo su
 # cleanup
 RUN grep -v "security" /etc/apt/sources.list.bak > /etc/apt/sources.list
 RUN apt-get update && echo success6
+RUN apt-get -y clean && echo success7
