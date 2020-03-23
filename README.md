@@ -4,7 +4,7 @@ encrypted container images that work om circle ci: https://hub.docker.com/r/sdol
 
 | container image    | os         | status |
 |--------------------|------------|--------|
-| sdolenc/encrypted-circleci:dm-crypt   | alpine | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/encrypted-circleci/dm-crypt) |
+| sdolenc/encrypted-circleci:dm-crypt   | arch | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/encrypted-circleci/dm-crypt) |
 | sdolenc/encrypted-circleci:cryptsetup | alpine | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/encrypted-circleci/cryptsetup) |
 
 
