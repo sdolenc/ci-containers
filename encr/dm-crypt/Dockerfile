@@ -1,3 +1,3 @@
 FROM linuxkit/dm-crypt
 
-apk add ca-certificates
+RUN apk add ca-certificates
