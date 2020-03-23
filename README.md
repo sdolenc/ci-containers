@@ -1,9 +1,14 @@
 # ci-containers
-debian container images that work on circle ci
 
-https://github.com/sdolenc/ci-containers
+encrypted container images that work om circle ci: https://hub.docker.com/r/sdolenc/encrypted-circleci
 
-https://hub.docker.com/r/sdolenc/debian-circleci
+| container image    | os         | status |
+|--------------------|------------|--------|
+| sdolenc/encrypted-circleci:dm-crypt   | alpine | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/encrypted-circleci/dm-crypt) |
+| sdolenc/encrypted-circleci:cryptsetup | alpine | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/encrypted-circleci/cryptsetup) |
+
+
+debian container images that work on circle ci: https://hub.docker.com/r/sdolenc/debian-circleci
 
 | container image    | os         | released      | status |
 |--------------------|------------|---------------|--------|
@@ -18,3 +23,5 @@ https://hub.docker.com/r/sdolenc/debian-circleci
 | sdolenc/debian-circleci:sarge   | Debian 3.1 | June 2005     | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/debian-circleci/sarge) |
 | sdolenc/debian-circleci:woody   | Debian 3.0 | July 2002     | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/debian-circleci/woody) |
 | sdolenc/debian-circleci:potato  | Debian 2.2 | August 2000   | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/sdolenc/debian-circleci/potato) |
+
+Dockerfiles: https://github.com/sdolenc/ci-containers
