@@ -1,11 +1,11 @@
 FROM debian/eol:jessie
 
-# remove security to help speed up apt-get (and reduce failures)
-RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
-RUN grep -v "security" /etc/apt/sources.list.bak > /etc/apt/sources.list
-
-# installs
-RUN apt-get update && apt-get install -y aptitude && aptitude install -y git ssh tar gzip ca-certificates && echo echo
-
-# cleanup
-RUN rm -rf /var/lib/apt/lists/*
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak; \
+    grep -v "security" /etc/apt/sources.list.bak > /etc/apt/sources.list; \
+    \
+    apt-get update; \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes --no-install-recommends ca-certificates; \
+    \
+    apt-get -y autoremove; \
+    apt-get -y clean; \
+    rm -rf /var/lib/apt/lists/*
